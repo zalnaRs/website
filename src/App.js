@@ -1,17 +1,11 @@
 import React from 'react';
 import './assets/css/index.css';
-import {AppBar, Toolbar, Typography} from '@material-ui/core';
+import { NavBar } from './assets/components/navbar';
 
 function App() {
-    return ( 
-        <div className = "App">
-           <AppBar position="static">
-                <Toolbar>
-                    <Typography variant="h6">
-                        zalnaRs
-                    </Typography>
-                </Toolbar>
-            </AppBar>
+    return (
+        <div className="App">
+            <NavBar></NavBar>
         </div>
     );
 }
