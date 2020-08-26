@@ -1,0 +1,36 @@
+div {
+  
+}
+
+.header {
+  padding: 100px;
+  height: 100%;
+  color: white!important;
+}
+
+.center {
+  display: "flex";
+  flex-direction: "column";
+  align-items: "center";
+}
+
+.logo {
+  border-radius: 50px;
+  width: 50px;
+}
+
+.logo:hover {
+  border-radius: 10px;
+}
+
+.HeaderBox {
+  width: fit-content;
+  opacity: 0.8;
+}
+
+.HeaderBox:hover {
+  padding: 10px;
+  box-shadow: 4px 4px 4px 4px gray;
+  opacity: 1;
+  background-color: rgba(209, 209, 209, 0.95);
+}
