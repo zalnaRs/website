@@ -62,7 +62,8 @@ export default function Home() {
             <ArrowDownwardIcon/>
           </a>
         </center>
-      </header>              
+      </header>         
+      <hr/>     
       <Projects id="Projects" />
     </div>
   );
