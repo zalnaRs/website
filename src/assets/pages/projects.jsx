@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <center>
       <h1>Projects</h1>
-      <h2>Projects which made by me or <a href="http://github.com/ThatCakeIDttp:">ThatCakeId TEAM</a></h2>
+      <h2>Projects which made by me or <a href="http://thatcakeid.com">ThatCakeId TEAM</a></h2>
       <Card style={{ width: 250 }}>
         <CardContent>
           <img width="50px" src={osthmlogo} alt="os-thm logo" />
@@ -22,7 +22,7 @@ export default function Projects() {
         </Typography>
         </CardContent> 
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button href="http://os-thm.thatcakeid.com" size="small">Learn More</Button>
         </CardActions>
       </Card>
     </center> 
