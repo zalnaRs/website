@@ -5,12 +5,14 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import osthmlogo from '../images/os-thm-logo.png';
+import zrytezenelogo from '../images/zrytezene-logo.png';
 
 export default function Projects() {
   return (
     <center>
       <h1>Projects</h1>
       <h2>Projects which made by me or <a href="http://thatcakeid.com">ThatCakeId TEAM</a></h2>
+      <div style={{ display: "flex", flexDirection: "row" }}>
       <Card style={{ width: 250 }}>
         <CardContent>
           <img width="50px" src={osthmlogo} alt="os-thm logo" />
@@ -27,7 +29,7 @@ export default function Projects() {
       </Card>
       <Card style={{ width: 250 }}>
         <CardContent>
-          <img width="50px" src={osthmlogo} alt="os-thm logo" />
+          <img width="50px" src={zrytezenelogo} alt="os-thm logo" />
           <Typography color="textPrimary" gutterBottom>
           ZryteZene
           </Typography>
@@ -39,6 +41,7 @@ export default function Projects() {
           <Button href="http://zrytezene.xyz" size="small">Learn More</Button>
         </CardActions>
       </Card>
+      </div>
     </center> 
   );
 }
