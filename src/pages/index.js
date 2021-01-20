@@ -4,10 +4,6 @@ import "../assets/css/main.css"
 import style from "../assets/css/index.module.css"
 import SEO from "../api/seo"
 
-import zz_img from "../assets/img/zz.png"
-import discord_img from "../assets/img/discord.png"
-import github_img from "../assets/img/Github.png"
-
 export default function Home() {
   return (
     <div>
@@ -107,7 +103,7 @@ export default function Home() {
             <h1 data-sal="slide-up">Projects</h1>
             <div data-sal="slide-up" className="container">
               <div data-sal-delay="100" data-sal="slide-up" className="card">
-                <img src={zz_img} width={30} alt="zz_img" />
+                <img src="/static/zz.png" width={30} alt="zz_img" />
                 ZryteZene
                 <p style={{ fontSize: 16 }}>
                   A Free music streaming services providing fast server respond,
@@ -158,10 +154,10 @@ export default function Home() {
             }}
           >
             <a href="https://discord.gg/ydwXQXC">
-              <img src={discord_img} width={30} />
+              <img src="/static/Discord.png" width={30} />
             </a>
             <a href="https://github.com/zalnaRs">
-              <img src={github_img} width={30} />
+              <img src="/static/Github.png" width={30} />
             </a>
           </span>
 

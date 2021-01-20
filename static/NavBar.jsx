@@ -1,9 +1,6 @@
 import React, { Component } from "react"
 import style from "./Style.module.css"
 
-import Logo from "../../assets/img/logo.webp"
-import menu from "../../assets/img/menu-24px.svg"
-
 import { Link } from "gatsby"
 
 class NavBar extends Component {
@@ -16,11 +13,11 @@ class NavBar extends Component {
           for="menu"
           className={style.check}
         >
-          <img src={menu} alt="menu" />
+          <img src="/static/menu-24px.svg" alt="menu" />
         </label>
         <label className={style.logo}>
           <a href="https://zalnars.tk">
-            <img className={style.logoimg} src={Logo} alt="logo" />
+            <img className={style.logoimg} src="/static/logo.webp" alt="logo" />
           </a>
         </label>
         <ul>

@@ -4,10 +4,6 @@ import "../assets/css/main.css"
 import style from "../assets/css/index.module.css"
 import SEO from "../api/seo"
 
-import zz_img from "../assets/img/zz.png"
-import discord_img from "../assets/img/discord.png"
-import github_img from "../assets/img/Github.png"
-
 //Github ReadMe
 import marked from "marked"
 //let marked = require("marked")
@@ -53,10 +49,10 @@ export default function About() {
             }}
           >
             <a href="https://discord.gg/ydwXQXC">
-              <img src={discord_img} width={30} />
+              <img src="/static/Discord.png" width={30} />
             </a>
             <a href="https://github.com/zalnaRs">
-              <img src={github_img} width={30} />
+              <img src="/static/Github.png" width={30} />
             </a>
           </span>
 
