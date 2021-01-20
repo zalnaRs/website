@@ -4,9 +4,9 @@ import "../assets/css/main.css"
 import style from "../assets/css/index.module.css"
 import SEO from "../api/seo"
 
-import zz_img from "../assets/img/zz.png"
-import discord_img from "../assets/img/discord.png"
-import github_img from "../assets/img/Github.png"
+import zz_img from "./../assets/img/zz.png"
+import discord_img from "./../assets/img/discord.png"
+import github_img from "./../assets/img/Github.png"
 
 export default function Home() {
   return (
