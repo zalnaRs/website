@@ -6,17 +6,19 @@ import SEO from "../api/seo"
 
 //Github ReadMe
 import marked from "marked"
+import "whatwg-fetch"
 //let marked = require("marked")
 
-var storedText
-
-fetch(
-  "https://raw.githubusercontent.com/zalnaRs/zalnaRs/master/README.md"
-).then(function (response) {
-  response.text().then(function (text) {
-    storedText = text
+var storedText = "failed"
+if (typeof XMLHttpRequest !== "undefined") {
+  fetch(
+    "https://raw.githubusercontent.com/zalnaRs/zalnaRs/master/README.md"
+  ).then(function (response) {
+    response.text().then(function (text) {
+      storedText = text
+    })
   })
-})
+}
 
 export default function About() {
   return (
