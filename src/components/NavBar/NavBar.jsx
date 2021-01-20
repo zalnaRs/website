@@ -4,6 +4,8 @@ import style from "./Style.module.css"
 import Logo from "../../assets/img/logo.webp"
 import menu from "../../assets/img/menu-24px.svg"
 
+import { Link } from "gatsby"
+
 class NavBar extends Component {
   render() {
     return (
@@ -23,8 +25,8 @@ class NavBar extends Component {
         </label>
         <ul>
           <li>
-            <a href="#home">Home</a>
-            <a href="#projects">Projects</a>
+            <Link to="/">Home</Link>
+            <Link to="/about">About me</Link>
           </li>
         </ul>
       </nav>

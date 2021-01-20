@@ -5,6 +5,8 @@ import style from "../assets/css/index.module.css"
 import SEO from "../api/seo"
 
 import zz_img from "../assets/img/zz.png"
+import discord_img from "../assets/img/discord.png"
+import github_img from "../assets/img/Github.png"
 
 export default function Home() {
   return (
@@ -102,9 +104,9 @@ export default function Home() {
             }}
             id="projects"
           >
-            <h1>Projects</h1>
-            <div className="container">
-              <div className="card">
+            <h1 data-sal="slide-up">Projects</h1>
+            <div data-sal="slide-up" className="container">
+              <div data-sal-delay="100" data-sal="slide-up" className="card">
                 <img src={zz_img} width={30} alt="zz_img" />
                 ZryteZene
                 <p style={{ fontSize: 16 }}>
@@ -115,7 +117,7 @@ export default function Home() {
                   Open
                 </a>
               </div>
-              <div className="card">
+              <div data-sal-delay="200" data-sal="slide-up" className="card">
                 Random number Generator
                 <a
                   href="https://zalnars.github.io/randomnumber"
@@ -130,7 +132,7 @@ export default function Home() {
                   github
                 </a>
               </div>
-              <div className="card">
+              <div data-sal-delay="300" data-sal="slide-up" className="card">
                 OffAd
                 <p style={{ fontSize: 16 }}>
                   Easy, secure, fast way to block ads and trackers, Take back
@@ -144,7 +146,31 @@ export default function Home() {
           </section>
         </center>
       </main>
-      <footer></footer>
+      <footer>
+        <div>
+          <span
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center!important",
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+          >
+            <a href="https://discord.gg/ydwXQXC">
+              <img src={discord_img} width={30} />
+            </a>
+            <a href="https://github.com/zalnaRs">
+              <img src={github_img} width={30} />
+            </a>
+          </span>
+
+          <p>
+            Powered by: <a href="https://vercel.com/">Vercel</a>!
+          </p>
+          <p>Made by: zalnaRs!</p>
+        </div>
+      </footer>
     </div>
   )
 }

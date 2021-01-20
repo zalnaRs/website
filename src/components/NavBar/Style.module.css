@@ -1,7 +1,7 @@
 .navbar {
   text-decoration: none;
   list-style: none;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(247, 245, 245 0.6);
   height: 60px;
   padding: 0 100px;
   font-weight: bold;
@@ -38,6 +38,17 @@
 }
 
 .navbar ul li a:hover {
+  margin: 16px;
+  color: rgb(0, 0, 0);
+  text-decoration: dashed underline 2px;
+}
+
+.navbar ul li Link {
+  margin: 12px;
+  color: rgb(116, 116, 116);
+}
+
+.navbar ul li Link:hover {
   margin: 16px;
   color: rgb(0, 0, 0);
   text-decoration: dashed underline 2px;

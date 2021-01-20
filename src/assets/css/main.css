@@ -11,7 +11,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out !important;
 }
 
 .right {
@@ -75,6 +75,31 @@ html {
     display: grid;
     grid-template-columns: auto auto;
   }
+}
+
+footer {
+  text-align: center;
+  padding: 12px;
+  background-color: rgb(250, 250, 250);
+}
+
+footer img {
+  opacity: 0.6;
+}
+
+footer img:hover {
+  opacity: 1;
+}
+
+footer a {
+  opacity: 0.6;
+  text-decoration: none;
+  color: black;
+}
+
+footer a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 @media (max-width: 456px) {

@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     title: "zalnaRs",
     titleTemplate: "%s · zalnaRs",
-    description: "Im ZalnaRs from the ThatCakeId TEAM",
+    description: "Hi there, im zalnaRs!",
     url: "https://zalnars.tk",
     image: "logo.png",
     twitterUsername: "@RsZalna",

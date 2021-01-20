@@ -3,7 +3,6 @@
   "private": true,
   "description": "My website",
   "version": "0.1.0",
-  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -17,6 +16,7 @@
     "gatsby": "^2.26.1",
     "gatsby-plugin-google-gtag": "^2.3.0",
     "gatsby-plugin-scroll-reveal": "0.0.7",
+    "marked": "^1.2.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0"
