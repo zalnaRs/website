@@ -104,7 +104,7 @@ export default function Home() {
             <h1 data-sal="slide-up">Projects</h1>
             <div data-sal="slide-up" className="container">
               <div data-sal-delay="100" data-sal="slide-up" className="card">
-                <img src="/static/zz.png" width={30} alt="zz_img" />
+                <img src={"img/zz.png"} width={30} alt="zz_img" />
                 ZryteZene
                 <p style={{ fontSize: 16 }}>
                   A Free music streaming services providing fast server respond,
