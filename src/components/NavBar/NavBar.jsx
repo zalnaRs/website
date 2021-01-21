@@ -13,11 +13,11 @@ class NavBar extends Component {
           for="menu"
           className={style.check}
         >
-          <img src="/static/menu-24px.svg" alt="menu" />
+          <img src={"img/menu-24px.svg"} alt="menu" />
         </label>
         <label className={style.logo}>
           <a href="https://zalnars.tk">
-            <img className={style.logoimg} src="/static/logo.webp" alt="logo" />
+            <img className={style.logoimg} src={"img/logo.webp"} alt="logo" />
           </a>
         </label>
         <ul>

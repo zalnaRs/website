@@ -1,5 +1,6 @@
 import React from "react"
 import NavBar from "../components/NavBar/NavBar"
+import Footer from "../components/Footer/Footer"
 import "../assets/css/main.css"
 
 import SEO from "../api/seo"
@@ -28,7 +29,7 @@ export default function Home() {
           </a>
         </header>
       </main>
-      <footer></footer>
+      <Footer />
     </div>
   )
 }

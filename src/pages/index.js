@@ -1,5 +1,6 @@
 import React from "react"
 import NavBar from "../components/NavBar/NavBar"
+import Footer from "../components/Footer/Footer"
 import "../assets/css/main.css"
 import style from "../assets/css/index.module.css"
 import SEO from "../api/seo"
@@ -142,31 +143,7 @@ export default function Home() {
           </section>
         </center>
       </main>
-      <footer>
-        <div>
-          <span
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center!important",
-              textAlign: "center",
-              justifyContent: "center",
-            }}
-          >
-            <a href="https://discord.gg/ydwXQXC">
-              <img src="/static/Discord.png" width={30} />
-            </a>
-            <a href="https://github.com/zalnaRs">
-              <img src="/static/Github.png" width={30} />
-            </a>
-          </span>
-
-          <p>
-            Powered by: <a href="https://vercel.com/">Vercel</a>!
-          </p>
-          <p>Made by: zalnaRs!</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
