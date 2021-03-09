@@ -126,7 +126,7 @@ export default function Home() {
                   style={{ marginTop: 8 }}
                   href="https://github.com/zalnaRs/randomnumber"
                 >
-                  github
+                  Github
                 </a>
               </div>
               <div data-sal-delay="300" data-sal="slide-up" className="card">
@@ -145,7 +145,16 @@ export default function Home() {
                 <p style={{ fontSize: 16 }}>
                   ControllerAsInput is allowing to use a Xbox controller as mouse!
                 </p>
-                <a href="https://zalnars.github.io/ControllerAsInput/" className="button">
+                <a
+                  href="https://zalnars.github.io/ControllerAsInput"
+                  className="button"
+                >
+                  Website
+                </a>
+                <a
+                  style={{ marginTop: 8 }}
+                  href="https://github.com/zalnaRs/ControllerAsInput"
+                >
                   Github
                 </a>
               </div>
