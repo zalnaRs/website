@@ -140,6 +140,15 @@ export default function Home() {
                 </a>
               </div>
             </div>
+    <div data-sal-delay="400" data-sal="slide-up" className="card">
+                ControllerAsInput
+                <p style={{ fontSize: 16 }}>
+                  ControllerAsInput is allowing to use a Xbox controller as mouse!
+                </p>
+                <a href="https://zalnars.github.io/ControllerAsInput/" className="button">
+                  Github
+                </a>
+              </div>
           </section>
         </center>
       </main>
