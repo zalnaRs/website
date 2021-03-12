@@ -16,7 +16,7 @@ class NavBar extends Component {
           <img src={"img/menu-24px.svg"} alt="menu" />
         </label>
         <label className={style.logo}>
-          <a href="https://zalnars.tk">
+          <a href="https://zalnars.cf">
             <img className={style.logoimg} src={"img/logo.webp"} alt="logo" />
           </a>
         </label>
