@@ -1,12 +1,11 @@
 ---
-
+import Section from './Section.astro';
 ---
 
-<section id="stats" class="m-auto container mt-12">
-  <h1 class="text-8xl font-black mb-4" data-sal="slide-up" data-sal-delay="100">
-    Stats
-  </h1>
-  <ul class="m-auto flex gap-2 pl-4 items-center">
+<Section id="stats" title="Stats">
+  <ul
+    class="m-auto flex gap-2 pl-4 items-center w-full whitespace-nowrap overflow-x-auto"
+  >
     <img
       src="https://github-readme-stats.vercel.app/api?username=zalnaRs&theme=transparent&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)"
       class="h-64"
@@ -34,4 +33,4 @@
       Github Readme Stats by anuraghazra
     </a> for this api!</sub
   >
-</section>
+</Section>

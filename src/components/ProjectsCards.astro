@@ -1,4 +1,5 @@
 ---
+import Section from './Section.astro';
 const projects = [
   {
     title: 'ControllerAsInput',
@@ -13,12 +14,8 @@ const projects = [
 ];
 ---
 
-<section class="relative container m-auto">
-  <div class="absolute -top-16 left-0" id="projects"></div>
-  <h1 class="text-8xl font-black mb-4" data-sal="slide-up" data-sal-delay="300">
-    Projects
-  </h1>
-  <ul class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+<Section id="projects" title="Projects">
+  <ul class="p-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
     {
       projects.map(({ title, href, description }, i) => (
         <a
@@ -37,4 +34,4 @@ const projects = [
       ))
     }
   </ul>
-</section>
+</Section>

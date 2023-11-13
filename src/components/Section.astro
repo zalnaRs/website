@@ -1,0 +1,16 @@
+---
+const { id, title } = Astro.props;
+---
+
+<section class="relative container m-auto p-4 md:p-0">
+  <div class="absolute -top-16 left-0" id={id}></div>
+  <h1
+    class="text-3xl md:text-8xl font-black mb-4"
+    data-sal="slide-up"
+    data-sal-delay="100"
+  >
+    {title}
+  </h1>
+
+  <slot />
+</section>
