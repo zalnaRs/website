@@ -1,9 +1,9 @@
 ---
 const socials = [
-  {
+  /* {
     label: 'Mastodon',
     href: 'https://mastodon',
-  },
+  }, */
   {
     label: 'Github',
     href: 'https://github.com/zalnaRs',
@@ -12,16 +12,12 @@ const socials = [
 ---
 
 <div class="flex gap-2 items-center">
-  <a href="https://m.webtoo.ls/@astro" target="_blank">
-    <span class="sr-only">Follow Astro on Mastodon</span>
-  </a>
-
   {
     socials.map(({ href, label }) => (
       <a
         href={href}
         target="_blank"
-        class="hover:underline hover:text-green-600"
+        class="p-2 md:p-0 hover:underline hover:text-green-600"
       >
         {label}
       </a>

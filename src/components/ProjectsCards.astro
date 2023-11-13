@@ -1,0 +1,55 @@
+---
+const projects = [
+  {
+    title: 'ControllerAsInput',
+    href: 'https://github.com/zalnaRs/ControllerAsInput',
+    description: 'Allows you to use a xbox controller as a mouse.',
+  },
+  {
+    title: 'zalnaRs',
+    href: 'https://zalnars.vercel.app',
+    description: 'Made with Astro, probably the best personal website in 2023.',
+  },
+  {
+    title: 'zalnaRs',
+    href: 'https://zalnars.vercel.app',
+    description: 'Made with Astro, probably the best personal website in 2023.',
+  },
+  {
+    title: 'zalnaRs',
+    href: 'https://zalnars.vercel.app',
+    description: 'Made with Astro, probably the best personal website in 2023.',
+  },
+  {
+    title: 'zalnaRs',
+    href: 'https://zalnars.vercel.app',
+    description: 'Made with Astro, probably the best personal website in 2023.',
+  },
+];
+---
+
+<section class="relative container m-auto">
+  <div class="absolute -top-16 left-0" id="projects"></div>
+  <h1 class="text-8xl font-black mb-4" data-sal="slide-up" data-sal-delay="300">
+    Projects
+  </h1>
+  <ul class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {
+      projects.map(({ title, href, description }, i) => (
+        <a
+          href={href}
+          target="_blank"
+          data-sal="slide-up"
+          data-sal-delay={300 + i * 100}
+        >
+          <article class="transition-all hover:bg-zinc-100 dark:hover:bg-zinc-500 dark:bg-zinc-700 shadow p-2 rounded border outline-transparent hover:shadow-md active:bg-zinc-100 dark:active:bg-zinc-900">
+            <>
+              <h3 class="font-black text-4xl">{title}</h3>
+              <p class="text-lg">{description}</p>
+            </>
+          </article>
+        </a>
+      ))
+    }
+  </ul>
+</section>

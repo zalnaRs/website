@@ -18,8 +18,8 @@ const posts = (await getCollection('blog')).sort(
   </head>
   <body>
     <Header />
-    <main>
-      <section>
+    <main class="h-screen w-full flex items-center justify-center">
+      <!-- <section>
         <ul>
           {
             posts.map((post) => (
@@ -40,7 +40,8 @@ const posts = (await getCollection('blog')).sort(
             ))
           }
         </ul>
-      </section>
+      </section> -->
+      <h1 class="text-4xl">Nothing here yet...</h1>
     </main>
     <Footer />
   </body>
