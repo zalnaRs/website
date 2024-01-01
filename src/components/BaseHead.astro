@@ -1,7 +1,7 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import { ViewTransitions } from 'astro:transitions';
+//import { ViewTransitions } from 'astro:transitions';
 import '@fontsource-variable/inter';
 
 interface Props {
@@ -51,6 +51,11 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+
 <style>
   @tailwind base;
 
@@ -64,6 +69,14 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
       @apply bg-white scroll-smooth;
     }
 
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 700,
+        'GRAD' 200,
+        'opsz' 24;
+    }
+
     @media (prefers-color-scheme: dark) {
       html,
       body {
@@ -73,4 +86,4 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
   }
 </style>
 
-<ViewTransitions />
+<!-- <ViewTransitions />-->

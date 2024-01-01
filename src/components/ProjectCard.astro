@@ -1,0 +1,23 @@
+---
+import type { projects } from '../consts';
+const { project, i } = Astro.props as {
+  project: (typeof projects)[0];
+  i: number;
+};
+---
+
+<a
+  href={project.href}
+  target="_blank"
+  data-sal="slide-up"
+  data-sal-delay={300 + i * 100}
+>
+  <article
+    class={`transition-all hover:bg-zinc-100 dark:hover:bg-zinc-500 dark:bg-zinc-700 shadow p-2 rounded border outline-transparent hover:shadow-md active:bg-zinc-100 dark:active:bg-zinc-900`}
+  >
+    <>
+      <h3 class="font-black text-4xl">{project.title}</h3>
+      <p class="text-lg">{project.description}</p>
+    </>
+  </article>
+</a>

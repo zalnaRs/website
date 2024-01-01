@@ -1,0 +1,75 @@
+---
+type Download = {
+  title: string;
+  href: string;
+};
+
+const { download, repository } = Astro.props as {
+  download: Download[] | string;
+  repository: string;
+};
+---
+
+<section class="m-auto flex gap-2 items-center w-full whitespace-nowrap my-4">
+  {
+    download && typeof download == 'string' ? (
+      <a
+        target="_blank"
+        href={download}
+        class="group flex items-center justify-center hover:bg-green-200 rounded p-2 px-4 h-20 w-48 transition-all"
+      >
+        <span class="flex items-center justify-center gap-2 text-2xl font-black">
+          <span class="material-symbols-outlined text-2xl group-hover:font-black transition-all bg-green-400 rounded-full h-8 w-8 text-center flex justify-center items-center">
+            download
+          </span>
+          Download
+        </span>
+      </a>
+    ) : (
+      typeof download === 'object' && (
+        <div class="relative group flex flex-col transition-all w-48">
+          <button class="w-full group-focus-within:bg-green-200 group-hover:bg-green-200 rounded p-2 px-4 h-20 transition-all">
+            <span class="flex items-center justify-center gap-2 text-2xl font-black">
+              <span class="material-symbols-outlined text-2xl group-hover:font-black transition-all bg-green-400 rounded-full h-8 w-8 text-center flex justify-center items-center">
+                download
+              </span>
+              Download
+            </span>
+          </button>
+          <ul class="absolute -top-1 z-20 rounded w-full transition-all bg-green-200 opacity-0 group-focus-within:opacity-100 flex-col duration-300 pointer-events-none group-focus-within:pointer-events-auto group-focus-within:top-24">
+            {download.map((download, i) => (
+              <li class="w-full text-center flex">
+                <a
+                  href={download.href}
+                  data-sal="slide-up"
+                  data-sal-delay={50 + i * 50}
+                  target="_blank"
+                  class="w-full flex justify-center text-center py-4 hover:bg-green-300 transition-all hover:font-black"
+                >
+                  {download.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    )
+  }
+
+  {
+    repository && (
+      <a
+        target="_blank"
+        href={repository}
+        class="group flex items-center justify-center hover:bg-yellow-200 rounded p-2 px-4 h-20 w-48 transition-all"
+      >
+        <span class="flex items-center justify-center gap-2 text-2xl font-black">
+          <span class="material-symbols-outlined text-2xl group-hover:font-black transition-all bg-yellow-400 rounded-full h-8 w-8 text-center flex justify-center items-center">
+            code
+          </span>
+          Repository
+        </span>
+      </a>
+    )
+  }
+</section>

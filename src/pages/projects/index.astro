@@ -3,6 +3,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import ProjectsCards from '../../components/ProjectsCards.astro';
 ---
 
 <!doctype html>
@@ -14,16 +15,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
     <Header title={SITE_TITLE} />
 
     <main class="p-8">
-      <ul>
-        <li>
-          <a
-            href="https://github.com/zalnaRs/CarLinkShortcut"
-            target="_blank"
-            class="underline hover:no-underline hover:font-semibold"
-            >CarLinkShortcut</a
-          >
-        </li>
-      </ul>
+      <ProjectsCards />
     </main>
     <li class="mt-32 m-8 list-none">
       <a
