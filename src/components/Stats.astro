@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Section from './Section.astro';
 ---
 
@@ -6,19 +7,23 @@ import Section from './Section.astro';
   <ul
     class="m-auto flex gap-2 pl-4 items-center w-full whitespace-nowrap overflow-x-auto"
   >
-    <img
+    <Image
       src="https://github-readme-stats.vercel.app/api?username=zalnaRs&theme=transparent&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)"
       class="h-64"
       alt="github stats graph"
       data-sal="fade"
       data-sal-delay="200"
+      loading={'eager'}
+      inferSize
     />
-    <img
+    <Image
       src="https://github-readme-stats.vercel.app/api/top-langs/?username=zalnaRs&langs_count=8&theme=transparent&layout=compact"
       class="h-64"
       alt="my top languages graph"
       data-sal="fade"
       data-sal-delay="300"
+      loading={'eager'}
+      inferSize
     />
   </ul>
   <sub

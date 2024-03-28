@@ -10,6 +10,9 @@ export default {
       fontFamily: {
         sans: ['Inter Variable', 'Cantarell', ...defaultTheme.fontFamily.sans],
       },
+      transitionTimingFunction: {
+        'in-out-expo': 'cubic-bezier(0.87, 0, 0.13, 1)',
+      },
     },
   },
   plugins: [prose()],
