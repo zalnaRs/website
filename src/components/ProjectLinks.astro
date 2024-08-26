@@ -6,9 +6,11 @@ type Download = {
   href: string;
 };
 
-const { download, repository } = Astro.props as {
+const { download, repository, privacypolicy, termsandconditions } = Astro.props as {
   download: Download[] | string;
   repository: string;
+  privacypolicy?: string;
+  termsandconditions?: string;
 };
 ---
 
@@ -18,7 +20,7 @@ const { download, repository } = Astro.props as {
       <a
         target="_blank"
         href={download}
-        class="group flex items-center justify-center hover:bg-green-200 rounded p-2 px-4 h-20 w-48 transition-all"
+        class="group flex items-center justify-center no-underline hover:bg-green-200 rounded p-2 px-4 h-20 w-48 transition-all"
       >
         {/*
         <span class="flex items-center justify-center gap-2 text-2xl font-black">
@@ -41,7 +43,7 @@ const { download, repository } = Astro.props as {
                   data-sal="slide-up"
                   data-sal-delay={50 + i * 50}
                   target="_blank"
-                  class="w-full flex justify-center text-center py-4 hover:bg-green-300 dark:hover:bg-green-800 transition-all hover:font-black"
+                  class="w-full flex rounded no-underline justify-center text-center py-4 hover:bg-green-300 dark:hover:bg-green-800 transition-all hover:font-black"
                 >
                   {download.title}
                 </a>
@@ -58,13 +60,47 @@ const { download, repository } = Astro.props as {
       <a
         target="_blank"
         href={repository}
-        class="group flex items-center justify-center hover:bg-yellow-200 dark:hover:bg-yellow-500 rounded p-2 px-4 h-20 w-48 transition-all hover:-translate-y-1"
+        class="group flex items-center no-underline justify-center hover:bg-yellow-200 dark:hover:bg-yellow-500 rounded p-2 px-4 h-20 w-48 transition-all hover:-translate-y-1"
       >
         <span class="flex items-center justify-center gap-2 text-2xl font-black">
           <span class="material-symbols-outlined text-2xl group-hover:font-black transition-all bg-yellow-400 dark:bg-yellow-600 rounded-full h-8 w-8 text-center flex justify-center items-center">
             code
           </span>
           Repository
+        </span>
+      </a>
+    )
+  }
+
+  {
+    privacypolicy && (
+      <a
+        target="_blank"
+        href={privacypolicy}
+        class="group flex items-center no-underline justify-center hover:bg-red-200 dark:hover:bg-red-500 rounded p-2 px-4 h-20 w-58 transition-all hover:-translate-y-1"
+      >
+        <span class="flex items-center justify-center gap-2 text-2xl font-black">
+          <span class="material-symbols-outlined text-2xl group-hover:font-black transition-all bg-red-400 dark:bg-red-600 rounded-full h-8 w-8 text-center flex justify-center items-center">
+            policy
+          </span>
+          Privacy Policy
+        </span>
+      </a>
+    )
+  }
+
+  {
+    termsandconditions && (
+      <a
+        target="_blank"
+        href={termsandconditions}
+        class="group flex items-center no-underline justify-center hover:bg-fuchsia-200 dark:hover:bg-fuchsia-500 rounded p-2 px-4 h-20 w-84 transition-all hover:-translate-y-1"
+      >
+        <span class="flex items-center justify-center gap-2 text-2xl font-black">
+          <span class="material-symbols-outlined text-2xl group-hover:font-black transition-all bg-fuchsia-400 dark:bg-fuchsia-600 rounded-full h-8 w-8 text-center flex justify-center items-center">
+            gavel
+          </span>
+          Terms And Conditions
         </span>
       </a>
     )

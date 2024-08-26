@@ -9,13 +9,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={frontmatter.title + " - " + SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
     <Header title={SITE_TITLE} />
 
     <main class="p-8">
       <h1 class="text-4xl font-black">{frontmatter.title}</h1>
+
       <slot />
     </main>
     <Footer />
