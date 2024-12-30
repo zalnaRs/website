@@ -27,4 +27,10 @@ export const projects = [
     description:
       'Allows you to open all applications installed on your Android/Google TV.',
   },
+  {
+    title: 'Simple Teleprompter',
+    href: '/projects/simpleteleprompter',
+    description:
+      'Simple Teleprompter is a lightweight, easy-to-use Progressive Web App which is a teleprompter.',
+  },
 ];
