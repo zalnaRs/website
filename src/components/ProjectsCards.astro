@@ -23,7 +23,6 @@ const { limit } = Astro.props;
       limit && (
         <a
           href={'/projects'}
-          target="_blank"
           data-sal="slide-up"
           data-sal-delay={300 + 3 * 100}
         >
@@ -32,9 +31,9 @@ const { limit } = Astro.props;
           >
             <h3 class="text-4xl font-black flex items-center gap-2 px-4">
               See all
-              <span class="material-symbols-outlined text-4xl group-hover:font-black">
-                open_in_new
-              </span>
+              <span class="text-4xl group-hover:font-black flex items-center justify-center">
+              <img src="/img/icons/open_in_new.svg" alt="" />
+          </span>
             </h3>
           </article>
         </a>
