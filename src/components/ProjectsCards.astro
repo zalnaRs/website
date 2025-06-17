@@ -20,23 +20,24 @@ const { limit } = Astro.props;
         .map((project, i) => <ProjectCard i={i} project={project} />)
     }
     {
-      limit && (
+    limit && (
+    <li>
         <a
           href={'/projects'}
           data-sal="slide-up"
           data-sal-delay={300 + 3 * 100}
         >
-          <article
-            class={`group w-full h-30 flex-1 flex justify-center items-center transition-all hover:bg-zinc-100 dark:hover:bg-zinc-500 dark:bg-zinc-700 shadow p-2 rounded border outline-transparent hover:shadow-md active:bg-zinc-100 dark:active:bg-zinc-900`}
+          <span
+            class={`group w-full h-30 flex-1 flex justify-center items-center transition-all hover:bg-gray-200 dark:hover:bg-gray-500 dark:bg-gray-700 shadow p-2 rounded border outline-transparent hover:shadow-md active:bg-gray-300 dark:active:bg-gray-900`}
           >
             <h3 class="text-4xl font-black flex items-center gap-2 px-4">
               See all
               <span class="text-4xl group-hover:font-black flex items-center justify-center">
-              <img src="/img/icons/open_in_new.svg" alt="" />
+              <img src="/img/icons/open_in_new.svg" alt="" loading="lazy" class="dark:invert" width="24" height="24" />
           </span>
             </h3>
-          </article>
-        </a>
+          </span>
+        </a></li>
       )
     }
   </ul>

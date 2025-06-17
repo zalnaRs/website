@@ -11,12 +11,13 @@ const isActive = href === pathname; //||
 //pathname.endsWith(href?.toString() ?? '');
 ---
 
+<li>
 <a
   href={href}
-  class={`p-3 hover:bg-green-400/25 transition-all md:p-1 rounded-full md:px-4 ${
-    isActive ? 'font-bold bg-green-400/75' : ''
+  class={`hover:bg-lime-500/25 transition-all p-2 rounded px-4 ${
+    isActive ? 'font-bold bg-lime-500/75' : ''
   }`}
   {...props}
 >
   <slot />
-</a>
+</a></li>

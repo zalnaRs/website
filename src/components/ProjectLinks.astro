@@ -20,7 +20,7 @@ const { download, repository, privacypolicy, termsandconditions } = Astro.props 
       <a
         target="_blank"
         href={download}
-        class="group flex items-center justify-center no-underline hover:bg-green-200 rounded p-2 px-4 h-20 w-48 transition-all"
+        class="group flex items-center justify-center no-underline rounded p-2 px-4 h-20 w-48 transition-all"
       >
         {/*
         <span class="flex items-center justify-center gap-2 text-2xl font-black">
@@ -35,17 +35,16 @@ const { download, repository, privacypolicy, termsandconditions } = Astro.props 
       typeof download === 'object' && (
         <div class="relative group flex flex-col transition-all w-48">
           <DownloadButton />
-          <ul class="absolute -top-1 z-20 rounded w-full transition-all bg-green-200 dark:bg-green-500 opacity-0 group-focus-within:opacity-100 flex-col duration-300 pointer-events-none group-focus-within:pointer-events-auto group-focus-within:top-24">
-            {download.map((download, i) => (
+          <ul class="absolute -top-1 z-20 rounded w-full transition-all bg-lime-500 opacity-0 group-focus-within:opacity-100 flex-col duration-300 pointer-events-none group-focus-within:pointer-events-auto group-focus-within:top-24">
+      {download.map((el, i) => (
               <li class="w-full text-center flex">
                 <a
-                  href={download.href}
-                  data-sal="slide-up"
-                  data-sal-delay={50 + i * 50}
+                  href={el.href}
                   target="_blank"
-                  class="w-full flex rounded no-underline justify-center text-center py-4 hover:bg-green-300 dark:hover:bg-green-800 transition-all hover:font-black"
+          class={`w-full flex rounded no-underline justify-center text-center py-4 hover:bg-lime-600 transition-all hover:underline ${i === download.length-1 ? "rounded-t-none rounded-b" : i === 0 ? "rounded-t rounded-b-none" : "rounded-t-none rounded-b-none"}`}
+
                 >
-                  {download.title}
+                  {el.title}
                 </a>
               </li>
             ))}
@@ -60,10 +59,10 @@ const { download, repository, privacypolicy, termsandconditions } = Astro.props 
       <a
         target="_blank"
         href={repository}
-        class="group flex items-center no-underline justify-center hover:bg-yellow-200 dark:hover:bg-yellow-500 rounded p-2 px-4 h-20 w-48 transition-all hover:-translate-y-1"
+        class="group flex items-center no-underline justify-center hover:bg-yellow-500 rounded p-2 px-4 h-20 w-48 transition-all"
       >
         <span class="flex items-center justify-center gap-2 text-2xl font-black">
-          <span class="text-2xl group-hover:font-black transition-all bg-yellow-400 dark:bg-yellow-600 rounded-full h-8 w-8 text-center flex justify-center items-center">
+          <span class="text-2xl group-hover:font-black transition-all bg-yellow-500 rounded-full h-8 w-8 text-center flex justify-center items-center">
           <img src="/img/icons/code.svg" alt="" />
       </span>
           Repository
@@ -77,10 +76,10 @@ const { download, repository, privacypolicy, termsandconditions } = Astro.props 
       <a
         target="_blank"
         href={privacypolicy}
-        class="group flex items-center no-underline justify-center hover:bg-red-200 dark:hover:bg-red-500 rounded p-2 px-4 h-20 w-58 transition-all hover:-translate-y-1"
+        class="group flex items-center no-underline justify-center hover:bg-red-600 rounded p-2 px-4 h-20 w-58 transition-all"
       >
         <span class="flex items-center justify-center gap-2 text-2xl font-black">
-          <span class="text-2xl group-hover:font-black transition-all bg-red-400 dark:bg-red-600 rounded-full h-8 w-8 text-center flex justify-center items-center">
+          <span class="text-2xl group-hover:font-black transition-all bg-red-600 rounded-full h-8 w-8 text-center flex justify-center items-center">
           <img src="/img/icons/policy.svg" alt="" />
           </span>
           Privacy Policy
@@ -94,10 +93,10 @@ const { download, repository, privacypolicy, termsandconditions } = Astro.props 
       <a
         target="_blank"
         href={termsandconditions}
-        class="group flex items-center no-underline justify-center hover:bg-fuchsia-200 dark:hover:bg-fuchsia-500 rounded p-2 px-4 h-20 w-84 transition-all hover:-translate-y-1"
+        class="group flex items-center no-underline justify-center hover:bg-purple-500 rounded p-2 px-4 h-20 w-84 transition-all"
       >
         <span class="flex items-center justify-center gap-2 text-2xl font-black">
-          <span class="text-2xl group-hover:font-black transition-all bg-fuchsia-400 dark:bg-fuchsia-600 rounded-full h-8 w-8 text-center flex justify-center items-center">
+          <span class="text-2xl group-hover:font-black transition-all bg-purple-500 rounded-full h-8 w-8 text-center flex justify-center items-center">
           <img src="/img/icons/gavel.svg" alt="" />
           </span>
           Terms And Conditions

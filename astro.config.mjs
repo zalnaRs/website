@@ -8,4 +8,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://zalnars.vercel.app",
   integrations: [mdx(), sitemap(), tailwind()],
+  experimental: {
+    csp: true,
+  },
 });
