@@ -28,3 +28,4 @@ miniflare-dist/
 # Local configuration and secrets
 wrangler.toml
 .dev.vars
+.vercel

@@ -4,9 +4,9 @@ import sitemap from "@astrojs/sitemap";
 
 import tailwind from "@astrojs/tailwind";
 
-import cloudflare from "@astrojs/cloudflare";
-
 import htmlMinifierNext from "astro-html-minifier-next";
+
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -41,5 +41,5 @@ export default defineConfig({
       preventAttributesEscaping: true,
     }),
   ],
-  adapter: cloudflare(),
+  adapter: vercel(),
 });
