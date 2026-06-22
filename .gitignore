@@ -19,3 +19,12 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Cloudflare Wrangler
+.wrangler/
+wrangler-dist/
+miniflare-dist/
+
+# Local configuration and secrets
+wrangler.toml
+.dev.vars

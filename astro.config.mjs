@@ -4,16 +4,42 @@ import sitemap from "@astrojs/sitemap";
 
 import tailwind from "@astrojs/tailwind";
 
-import vercel from "@astrojs/vercel";
+import cloudflare from "@astrojs/cloudflare";
+
+import htmlMinifierNext from "astro-html-minifier-next";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://zalnars.vercel.app",
-  integrations: [mdx(), sitemap(), tailwind()],
-
-  experimental: {
-    csp: true,
-  },
-
-  adapter: vercel(),
+  site: "https://zalnars.is-a.dev",
+  integrations: [
+    mdx(),
+    sitemap(),
+    tailwind(),
+    htmlMinifierNext({
+      trimCustomFragments: true,
+      removeComments: true,
+      removeAttributeQuotes: true,
+      removeEmptyElements: true,
+      removeOptionalTags: true,
+      removeScriptTypeAttributes: true,
+      removeTagWhitespace: true,
+      removeStyleLinkTypeAttributes: true,
+      removeEmptyAttributes: true,
+      removeRedundantAttributes: true,
+      collapseWhitespace: true,
+      collapseInlineTagWhitespace: true,
+      collapseBooleanAttributes: true,
+      collapseAttributeWhitespace: true,
+      decodeEntities: true,
+      mergeScripts: true,
+      noNewlinesBeforeTagClose: true,
+      minifyURLs: true,
+      minifySVG: true,
+      minifyCSS: true,
+      minifyJS: true,
+      processConditionalComments: true,
+      preventAttributesEscaping: true,
+    }),
+  ],
+  adapter: cloudflare(),
 });
